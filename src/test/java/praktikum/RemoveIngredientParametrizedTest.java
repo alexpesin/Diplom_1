@@ -8,6 +8,7 @@ import org.junit.runners.Parameterized;
 
 import java.util.List;
 
+import static java.util.List.of;
 import static org.junit.Assert.*;
 
 @RunWith(Parameterized.class)
@@ -42,7 +43,7 @@ public class RemoveIngredientParametrizedTest {
     @BeforeClass
     public static void setUp() {
         burger = new Burger();
-        List<Ingredient> ingredients = List.of(
+        List<Ingredient> ingredients = of(
                 new Ingredient(IngredientType.SAUCE, "hot sauce", 100),
                 new Ingredient(IngredientType.SAUCE, "sour cream", 200),
                 new Ingredient(IngredientType.SAUCE, "chili sauce", 300),
