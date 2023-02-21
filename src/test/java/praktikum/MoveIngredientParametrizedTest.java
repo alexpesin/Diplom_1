@@ -17,7 +17,6 @@ public class MoveIngredientParametrizedTest {
     private final int index;
 
 
-
     public MoveIngredientParametrizedTest(Ingredient expectedIngredient, int newIndex, int index) {
         this.ingredient = expectedIngredient;
         this.newIndex = newIndex;
@@ -61,7 +60,6 @@ public class MoveIngredientParametrizedTest {
         assertEquals(ingredient.name, burger.ingredients.get(newIndex).name);
         assertEquals(ingredient.type, burger.ingredients.get(newIndex).type);
         assertEquals(0, Float.compare(ingredient.price, burger.ingredients.get(newIndex).price));
-
 
     }
 

@@ -5,7 +5,6 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
 
-
 import static org.junit.Assert.assertEquals;
 
 @RunWith(Parameterized.class)
@@ -23,19 +22,14 @@ public class AddIngredientParametrizedTest {
     }
 
     @Parameterized.Parameters
-    public static Object[][] addIngredientData(){
-        return new Object[][]{
-                {new Ingredient(IngredientType.SAUCE, "hot sauce", 100), 0, 1},
-                {new Ingredient(IngredientType.SAUCE, "sour cream", 200), 1, 2},
-                {new Ingredient(IngredientType.SAUCE, "chili sauce", 300), 2, 3},
+    public static Object[][] addIngredientData() {
+        return new Object[][]{{new Ingredient(IngredientType.SAUCE, "hot sauce", 100), 0, 1}, {new Ingredient(IngredientType.SAUCE, "sour cream", 200), 1, 2}, {new Ingredient(IngredientType.SAUCE, "chili sauce", 300), 2, 3},
 
-                {new Ingredient(IngredientType.FILLING, "cutlet", 100), 3, 4},
-                {new Ingredient(IngredientType.FILLING, "dinosaur", 200), 4, 5},
-                {new Ingredient(IngredientType.FILLING, "sausage", 300), 5, 6},
-        };
+                {new Ingredient(IngredientType.FILLING, "cutlet", 100), 3, 4}, {new Ingredient(IngredientType.FILLING, "dinosaur", 200), 4, 5}, {new Ingredient(IngredientType.FILLING, "sausage", 300), 5, 6},};
     }
+
     @BeforeClass
-    public static void setUp(){
+    public static void setUp() {
         burger = new Burger();
     }
 

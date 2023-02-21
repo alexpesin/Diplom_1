@@ -2,8 +2,7 @@ package praktikum;
 
 import org.junit.Test;
 
-
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
 import static praktikum.IngredientType.FILLING;
 import static praktikum.IngredientType.SAUCE;
 
@@ -16,7 +15,6 @@ public class IngredientTest {
         float expectedIngredientPrice = 100;
         float actualIngredientPrice = ingredient.getPrice();
 
-        //assertEquals(expectedIngredientPrice, actualIngredientPrice);  // java.lang.AssertionError: Use assertEquals(expected, actual, delta) to compare floating-point numbers
         assertEquals(0, Float.compare(expectedIngredientPrice, actualIngredientPrice));
     }
 

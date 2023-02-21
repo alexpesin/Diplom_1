@@ -5,7 +5,7 @@ import org.junit.Test;
 import java.util.ArrayList;
 import java.util.List;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
 
 
 public class IngredientTypeTest {
@@ -15,14 +15,11 @@ public class IngredientTypeTest {
 
         List<String> expectedTypeNameList = List.of("SAUCE", "FILLING");
         List<String> actualTypeNamesList = new ArrayList<>();
-        for (IngredientType type:IngredientType.values()) {
+        for (IngredientType type : IngredientType.values()) {
             actualTypeNamesList.add(type.name());
         }
         assertEquals(expectedTypeNameList, actualTypeNamesList);
 
-        /*assertThat(
-                (actualTypeNamesList),
-                hasItems("FILLING", "SAUCE"));*/
     }
 
     @Test
@@ -30,16 +27,13 @@ public class IngredientTypeTest {
 
         int expectedSize = 2;
         List<String> actualTypeNamesList = new ArrayList<>();
-        for (IngredientType type:IngredientType.values()) {
+        for (IngredientType type : IngredientType.values()) {
             actualTypeNamesList.add(type.name());
         }
         int actualSize = actualTypeNamesList.size();
 
-        assertEquals(expectedSize,actualSize);
+        assertEquals(expectedSize, actualSize);
     }
 
-   /* @Test
-    public void valueOf() {
 
-    }*/
 }

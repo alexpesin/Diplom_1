@@ -11,19 +11,17 @@ import org.mockito.runners.MockitoJUnitRunner;
 import java.util.ArrayList;
 import java.util.List;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
 import static org.mockito.Mockito.doReturn;
 import static org.mockito.Mockito.spy;
 
 @RunWith(MockitoJUnitRunner.class)
 public class BurgerTest {
+    public List<Ingredient> ingredients = new ArrayList<>();
     @Mock
     private Ingredient ingredient;
     @Mock
     private Bun bun;
-
-    public List<Ingredient> ingredients = new ArrayList<>();
-
     @Spy
     private Burger burger = Mockito.mock(Burger.class);
 
@@ -37,11 +35,13 @@ public class BurgerTest {
         assertEquals(expectedBun, actualBun);
 
     }
+
     @Before
-    public void setUp(){
+    public void setUp() {
         burger.setBuns(bun);
 
     }
+
     @Test
     public void getBurgerPriceTest() {
         Burger burgerSpy = spy(Burger.class);
